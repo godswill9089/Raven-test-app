@@ -1,0 +1,59 @@
+.card-transactions {
+  min-width: 25.8rem;
+  min-height: 12rem;
+  width: 27.9rem;
+  height: 16rem;
+  border-radius: 1.2rem;
+  background-color: var(--bg-color-2);
+  padding: 1.6rem;
+}
+
+.card-transactions .title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: var(--text-color-5);
+  margin-bottom: 2.4rem;
+}
+.card-transactions .title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: var(--text-color-5);
+  margin-bottom: 2.4rem;
+}
+.card-transactions .details-wrapper {
+  display: flex;
+  margin-bottom: 0.8rem;
+  align-items: flex-end;
+  column-gap: 0.5rem;
+  /* background-color: blue; */
+}
+.card-transactions .details-wrapper .amount {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+.card-transactions .details-wrapper .other {
+  display: flex;
+  align-items: center;
+  color: var(--text-color-4);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  column-gap: 0.2rem;
+  font-weight: 400;
+}
+.card-transactions .view-details {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  cursor: pointer;
+  display: inline;
+  color: var(--text-color-6);
+}
+.card-transactions .view-details.gain {
+  color: var(--text-color-7);
+}
+.card-transactions .view-details.loss {
+  color: var(--text-color-8);
+}

@@ -1,0 +1,115 @@
+@import url('../../../index.css');
+
+.sign-in {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  /* align-items: center; */
+}
+.sign-in .left-con {
+  width: 30%;
+  max-width: 40rem;
+  background-color:#F0EEFF;
+  padding: 6rem 3rem;
+}
+@media screen and (max-width: 600px) {
+  .sign-in .left-con {
+    display: none;
+  }
+
+}
+.sign-in .left-con .logo-con {
+  width: 10rem;
+  height: 5rem;
+  /* background-color: rgba(165, 42, 42, 0.236);
+  color: brown; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: centers;
+  font-size: 3rem;
+  font-weight: 400;
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.sign-in .main-con {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0%;
+  padding: 15.5rem 0;
+}
+@media screen and (max-width: 600px) {
+  .sign-in .main-con {
+    padding: 5rem 0;
+  }
+}
+.sign-in .main-con .content {
+  width: 45%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .sign-in .main-con .content{
+    width: 90%;
+  }
+}
+
+.sign-in .main-con .content .logo-con-mobile {
+  width: 10rem;
+  height: 5rem;
+  /* background-color: rgba(165, 42, 42, 0.236);
+  color: brown; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: centers;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 6rem;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .sign-in .main-con .content .logo-con-mobile {
+    display: flex;
+  }
+}
+.sign-in .main-con .content h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #0A090B;
+  margin-bottom: 4rem;
+}
+.sign-in .main-con .input-groups-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.sign-in .btn-wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.sign-in .no-account {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 1.2rem;
+}
+.sign-in .no-account p {
+}
+.sign-in .no-account .icon-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+}
+.sign-in .no-account span {
+  color: rgba(0, 0, 255, 0.463);
+  cursor: pointer;
+}
+.sign-in .no-account span .icon {
+  color: rgba(0, 0, 255, 0.463);
+}

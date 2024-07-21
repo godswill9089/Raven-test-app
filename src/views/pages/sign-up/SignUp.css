@@ -1,0 +1,124 @@
+@import url('../../../index.css');
+
+.sign-up {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  /* align-items: center; */
+}
+.sign-up .right-con {
+  width: 30%;
+  height: 150%;
+  max-width: 40rem;
+  background-color: #f0eeff;
+  padding: 6rem 3rem;
+}
+@media screen and (max-width: 600px) {
+  .sign-up .right-con {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sign-up .left-con {
+    display: none;
+  }
+}
+.sign-up .logo-con {
+  width: 10rem;
+  height: 5rem;
+  /* background-color: rgba(165, 42, 42, 0.236);
+  color: brown; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: centers;
+  font-size: 3rem;
+  font-weight: 400;
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+@media screen and (max-width: 600px) {
+  .sign-up .logo-con {
+    display: none;
+  }
+}
+
+.sign-up .main-con {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0%;
+  padding: 15.5rem 0;
+}
+@media screen and (max-width: 600px) {
+  .sign-up .main-con {
+    padding: 5rem 0;
+  }
+}
+.sign-up .main-con .content {
+  width: 45%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .sign-up .main-con .content {
+    width: 90%;
+  }
+}
+
+.sign-up .main-con .content .logo-con-mobile {
+  width: 10rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: centers;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 6rem;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .sign-up .main-con .content .logo-con-mobile {
+    display: flex;
+  }
+}
+.sign-up .main-con .content h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #0a090b;
+  margin-bottom: 2rem;
+}
+.sign-up .main-con .input-groups-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.sign-up .btn-wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.sign-up .no-account {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 1.2rem;
+}
+.sign-up .no-account .icon-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+}
+.sign-up .no-account span {
+  color: rgba(0, 0, 255, 0.463);
+  cursor: pointer;
+}
+.sign-up .no-account span .icon {
+  color: rgba(0, 0, 255, 0.463);
+}

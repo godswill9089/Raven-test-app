@@ -1,0 +1,91 @@
+@import url('../../../index.css');
+
+.sidebar-component::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-component {
+  width: 35rem;
+  max-width: 35rem;
+  background-color: #7000f6;
+  height: 100%;
+  overflow-y: auto;
+    /* margin-right: -20px; */
+    /* Adjust based on scrollbar width */
+    /* padding-right: 20px; */
+  /* position: fixed; */
+}
+@media screen and (max-width: 600px) {
+  .sidebar-component {
+    display: none;
+  }
+}
+.sidebar-component .user-info-wrapper {
+  padding: 1.6rem 2.4rem;
+  border-bottom: 1px solid #f3f4f61f;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
+.sidebar-component .user-info-wrapper .user-info {
+  display: flex;
+  column-gap: 0.8rem;
+}
+.sidebar-component .user-info-wrapper .user-info .img-con {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ffffff1f;
+  color: var(--text-color-1);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.sidebar-component .user-info-wrapper .details {
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 1rem; */
+}
+.sidebar-component .user-info-wrapper .details .title {
+  color: var(--text-color-1);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+.sidebar-component .user-info-wrapper .details .info {
+  color: var(--text-color-1);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+.sidebar-component .sidebar-options-wrapper {
+  padding: 1.2rem 2.4rem;
+}
+.sidebar-component .sidebar-options {
+  list-style-type: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-color-3);
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.sidebar-component .sidebar-options .sidebar-option {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+  height: 4.4rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+.sidebar-component .sidebar-options .sidebar-option.active {
+  background-color: #ffffff3d;
+  color: rgb(255, 246, 246);
+}
+.sidebar-component .sidebar-options .sidebar-option:hover {
+  background-color: #ffffff3d;
+  cursor: pointer;
+}

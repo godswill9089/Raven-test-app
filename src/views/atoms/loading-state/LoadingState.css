@@ -1,0 +1,95 @@
+.loading-state {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  min-height: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.loading-state2 {
+  min-height: 50rem;
+  border-top: 1px solid;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.border-none {
+  border: none;
+}
+.loading-state .img-container {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+@keyframes rotate-s-loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-state .loading-state-img {
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
+  height: 3.2rem;
+}
+.loading-state .info {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1c2127;
+  text-align: center;
+}
+
+.loading-indicator {
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
+  height: 3.2rem;
+}
+
+.loading-state-skeleton {
+  width: 100%;
+  height: 30vh;
+  /* margin: 2rem; */
+}
+
+.loading-state-skeleton:empty {
+  display: block;
+  background-color: #bdc3c7 !important;
+  animation-name: skeletonAnimation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.skeleton-loader:empty.others {
+  height: 3.2rem;
+}
+
+@keyframes skeletonAnimation {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

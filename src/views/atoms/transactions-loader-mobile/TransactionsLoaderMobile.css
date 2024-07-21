@@ -1,0 +1,14 @@
+.transactions-loader-mobile {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.transactions-loader-mobile .loader {
+  min-width: 100%;
+  min-height: 4rem;
+  width: 100%;
+  height: 4rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  /* padding: 1rem 0 ; */
+}
