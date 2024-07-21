@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import React from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Routes,
+} from 'react-router-dom';
 import SignUp from './views/pages/sign-up/SignUp';
 import SignIn from './views/pages/sign-in/SignIn';
 import DashboardLayout from './views/layouts/dashboard-layout/DashboardLayout';
@@ -15,6 +18,7 @@ import BillPayment from './views/pages/bill-payment/BillPayment';
 import Reports from './views/pages/reports/Reports';
 import Compliance from './views/pages/compliance/Compliance';
 import Settings from './views/pages/Settings/Settings';
+import { Navigate } from 'react-router-dom'; // Import Navigate for redirect
 
 function App() {
   const children = [
@@ -59,7 +63,12 @@ function App() {
       element: <Settings />,
     },
   ];
+
   const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Navigate to='/sign-up' />, // Redirect from root to /sign-up
+    },
     {
       path: '/sign-up',
       element: <SignUp />,
@@ -74,9 +83,7 @@ function App() {
       children,
     },
   ]);
-  useEffect(() => {
-    // window.location.replace('/sign-up');
-  }, []);
+
   return <RouterProvider router={router} />;
 }
 
