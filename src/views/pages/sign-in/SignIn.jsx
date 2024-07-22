@@ -5,9 +5,11 @@ import InputGroup from '../../molecules/input-group/InputGroup';
 import { FaBackward } from 'react-icons/fa6';
 import { Link, useNavigate } from 'react-router-dom';
 import { getImages } from '../../../hooks/getImages';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSignInFormData } from '../../../features/sign-in/sign-in-slice';
 
 const SignIn = () => {
+  const dispatch = useDispatch();
   const { signUpFormData } = useSelector((state) => state.signUp);
   const { logo } = getImages();
   const navigate = useNavigate();
@@ -21,13 +23,17 @@ const SignIn = () => {
     formDataTemp[name] = value;
     setFormData(formDataTemp);
   };
+  const handleSignin = () => {
+    navigate('/dashboard/transactions');
+    dispatch(setSignInFormData(formData));
+  }
 
   useEffect(() => {
     const user = localStorage.getItem('user');
     if (user) {
     } else {
       // go to sign up page and create an account
-      window.location.replace('/sign-up');
+      // window.location.replace('/sign-up');
     }
   }, []);
 
@@ -76,9 +82,7 @@ const SignIn = () => {
             <div className='btn-wrapper'>
               <Button
                 title={'Sign in'}
-                onClick={() => {
-                  navigate('/dashboard/transactions');
-                }}
+                onClick={handleSignin}
                 disabled={formData.email === '' || formData.password === ''}
               />
             </div>
