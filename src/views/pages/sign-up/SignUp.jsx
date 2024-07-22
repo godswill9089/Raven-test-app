@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { getImages } from '../../../hooks/getImages';
 import { useDispatch } from 'react-redux';
 import { setSignUpFormData } from '../../../features/sign-up/sign-up-slice';
+import { TbArrowBack } from 'react-icons/tb';
 const SignUp = () => {
   const dispatch = useDispatch();
   const { logo } = getImages();
@@ -98,7 +99,7 @@ const SignUp = () => {
               <Link to={'/sign-in'}>
                 <span>Sign in</span>
               </Link>
-              <FaBackward className='icon' />
+              <TbArrowBack className='icon' />
             </div>
           </div>
         </div>
