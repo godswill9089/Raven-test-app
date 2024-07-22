@@ -27,7 +27,13 @@ const Navbar = () => {
       window.location.replace('/sign-in')
       localStorage.removeItem('user')
     }
-  },[dropdownSelectedLogOut])
+  }, [dropdownSelectedLogOut])
+  
+  const  [userLoggedIn, setUserLoggedIn] = useState({})
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    setUserLoggedIn(user)
+  },[])
 
   return (
     <div className='navbar-component'>
@@ -63,8 +69,8 @@ const Navbar = () => {
                   <div className='user-info'>
                     <img src={user} alt='user' className='' />
                     <p className='name'>
-                      {signUpFormData.first_name || ''}{' '}
-                      {signUpFormData.last_name || ''}
+                      {userLoggedIn.first_name || 'User'}{' '}
+                      {userLoggedIn.last_name || ''}
                     </p>
                     <span>
                       <FaChevronDown />

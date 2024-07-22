@@ -26,6 +26,7 @@ const SignIn = () => {
   const handleSignin = () => {
     navigate('/dashboard/transactions');
     dispatch(setSignInFormData(formData));
+    localStorage.setItem('user', JSON.stringify(formData));
   }
 
   useEffect(() => {

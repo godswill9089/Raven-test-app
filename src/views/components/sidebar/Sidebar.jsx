@@ -105,14 +105,21 @@ const Sidebar = () => {
     });
     setSidebarOptions(sidebarOptionsTemp);
   }, [location.pathname]);
+
+  const [userLoggedIn, setUserLoggedIn] = useState({})
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    setUserLoggedIn(user)
+  }, [])
+
   return (
     <div className='sidebar-component'>
       <div className='user-info-wrapper'>
         <div className='user-info'>
           <div className='img-con'>TU</div>
           <div className='details'>
-            <h3 className='title'>{signUpFormData.first_name}</h3>
-            <p className='info'>{signUpFormData.email}</p>
+            <h3 className='title'>{userLoggedIn.first_name || 'User'}</h3>
+            <p className='info'>{userLoggedIn.email}</p>
           </div>
         </div>
       </div>
